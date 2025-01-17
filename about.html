@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Product of Africa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #000;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        header img {
+            max-width: 100px;
+            margin-right: auto;
+        }
+
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        nav a {
+            color: #ff9900;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            color: #945900;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 50px;
+            background-image: url('hero.jpg');
+            /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            color: #fff;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .hero h1 {
+            position: relative;
+            z-index: 2;
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            position: relative;
+            z-index: 2;
+            font-size: 1.2em;
+        }
+
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .content h2 {
+            color: #ff9900;
+            margin-bottom: 15px;
+        }
+
+        .content p {
+            margin-bottom: 15px;
+        }
+
+        .footer {
+            background-color: #111;
+            padding: 10px;
+            text-align: center;
+            color: #ccc;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="logo.png" alt="Product of Africa Logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="products.html">Products</a>
+            <a href="learning.html">Learning</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Bringing the Motherland to Your Doorstep</h1>
+        <p>Your trusted source for authentic African products, crafted with care and tradition.</p>
+    </section>
+
+    <section class="content">
+        <h2>Our Mission</h2>
+        <p>At Product of Africa, we are dedicated to connecting you with the essence of Africa through our premium
+            products. From shea butter to black soap, our offerings reflect the richness and diversity of the continent.
+        </p>
+
+        <h2>What We Offer</h2>
+        <p>Our product range includes:</p>
+        <ul style="list-style: none; padding: 0;">
+            <li>Shea Butter, Cocoa Butter, Mango Butter</li>
+            <li>Black Soap, Organic Soaps</li>
+            <li>Essential Oils, Fragrance Oils</li>
+            <li>Traditional Garments, Raw Ingredients</li>
+        </ul>
+
+        <h2>Visit Us</h2>
+        <p>3215 Flushing Road, Flint, Michigan 48504</p>
+        <p>Open Mon-Sat: 10 AM - 7 PM | Sun: 12 PM - 7 PM</p>
+
+        <h2>Contact Us</h2>
+        <p>For inquiries, call us at 667-770-9195 or visit <a href="https://www.proofafricaus.com"
+                style="color: #ff9900; text-decoration: none;">www.proofafricaus.com</a>.</p>
+    </section>
+
+    <footer class="footer">
+        &copy; 2025 Product of Africa. All rights reserved.
+    </footer>
+</body>
+
+</html>

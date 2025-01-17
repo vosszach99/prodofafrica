@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starter Kits - Product of Africa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+        }
+
+        header {
+            background-color: #000;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        header img {
+            max-width: 100px;
+            margin-right: auto;
+        }
+
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        nav a {
+            color: #ff9900;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #cc7a00;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 50px;
+            background-image: url('starter-kit2.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #fff;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            /* Add a dark overlay for better text contrast */
+            z-index: 1;
+        }
+
+        .hero h1,
+        .hero p,
+        .hero a {
+            position: relative;
+            z-index: 2;
+        }
+
+
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .hero a {
+            padding: 15px 30px;
+            background-color: #ff9900;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 5px;
+        }
+
+        .hero a:hover {
+            background-color: #cc7a00;
+        }
+
+        .kits-container {
+            padding: 40px 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .kit {
+            background-color: #222;
+            padding: 20px;
+            border: 1px solid #444;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+        }
+
+        .kit img {
+            width: 100%;
+            height: auto;
+            max-height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .kit h2 {
+            margin: 15px 0;
+        }
+
+        .kit p {
+            font-size: 1em;
+            margin: 10px 0;
+        }
+
+        .kit a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #ff9900;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .kit a:hover {
+            background-color: #cc7a00;
+        }
+
+        .banner {
+            background-color: #ff9900;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .banner a {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="logo.png" alt="Product of Africa Logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="learning.html">Learning</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Starter Kits</h1>
+        <p>Discover the perfect way to start your journey with our curated starter kits. Experience the best of what
+            Product of Africa has to offer!</p>
+        <a href="kits.html">Explore Kits</a>
+    </section>
+
+    <section id="kits" class="kits-container">
+        <div class="kit">
+            <img src="accessories.jpg" alt="Accessories">
+            <h2>Accessories</h2>
+            <p>Includes a selection of our accessories to pair with our products.</p>
+            <a href="accessories.html">View</a>
+        </div>
+        <div class="kit">
+            <img src="learning.jpg" alt="Learning">
+            <h2>Learning the Essentials</h2>
+            <p>What you need to learn for your hair and skin, and lifestyle all in one place.</p>
+            <a href="learning.html">View</a>
+        </div>
+    </section>
+    <div class="banner">
+        <p>Want to learn how to use our products effectively? <a href="learning.html">Click here to learn more</a></p>
+    </div>
+</body>
+
+</html>

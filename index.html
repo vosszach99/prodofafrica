@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product of Africa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            color: #fff;
+        }
+
+        header {
+            background-color: #000;
+            display: flex;
+            align-items: center;
+            padding: 6px;
+        }
+
+        header img {
+            max-width: 80px;
+            margin-right: auto;
+        }
+
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        nav a {
+            color: #ff9900;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            color: #945900;
+        }
+
+        .hero {
+            text-align: center;
+            position: relative;
+            color: #fff;
+            background: url('hero-image.jpg') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero h1 {
+            margin: 0;
+            font-size: 3em;
+        }
+
+        .hero p {
+            font-size: 1.5em;
+        }
+
+        .shop-now {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ff9900;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 5px;
+        }
+
+        .shop-now:hover {
+            background-color: #cc7a00;
+        }
+
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-item {
+            flex: 0 0 20%;
+            width: 20%;
+            box-sizing: border-box;
+            background-color: #111111;
+            border: 1px solid #363636;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .carousel-controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
+
+        .carousel-control {
+            background-color: rgb(255, 255, 255);
+            color: #000000;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 50%;
+            pointer-events: auto;
+        }
+
+        .category-section {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0;
+        }
+
+        .category-item {
+            position: relative;
+        }
+
+        .category-item img {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+            display: block;
+        }
+
+        .category-item a {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            text-indent: -9999px;
+            background-color: rgba(255, 255, 255, 0);
+        }
+
+        .reviews-section {
+            padding: 20px;
+            background-color: #000000;
+            text-align: center;
+        }
+
+        .reviews-section h2 {
+            margin-bottom: 20px;
+        }
+
+        .reviews {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .review {
+            background-color: #111111;
+            padding: 15px;
+            border: 1px solid #363636;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+        }
+
+        .banner {
+            background-color: #ff9900;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .banner a {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="logo.png" alt="Product of Africa Logo">
+        <nav>
+            <a href="about.html">About Us</a>
+            <a href="products.html">Products</a>
+            <a href="learning.html">Learning</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <div class="hero">
+        <h1>Bringing the Motherland to Your Doorstep</h1>
+        <p>Authentic, natural, organic African products for skin, hair, and more.</p>
+        <a href="products.html" class="shop-now">Shop Now</a>
+    </div>
+    <div class="carousel-container">
+        <button class="carousel-control" id="next">&#8249;</button>
+        <button class="carousel-control" id="prev">&#8250;</button>
+        <div class="carousel" id="carousel">
+            <div class="carousel-item">
+                <img src="soap1.jpg" alt="Soap 1">
+                <h3>Soap 1</h3>
+                <p>Brief description of soap 1.</p>
+                <a href="soap1.html" class="shop-now">Shop</a>
+            </div>
+            <div class="carousel-item">
+                <img src="soap2.jpg" alt="Soap 2">
+                <h3>Soap 2</h3>
+                <p>Brief description of soap 2.</p>
+                <a href="soap2.html" class="shop-now">Shop</a>
+            </div>
+            <div class="carousel-item">
+                <img src="soap3.jpg" alt="Soap 3">
+                <h3>Soap 3</h3>
+                <p>Brief description of soap 3.</p>
+                <a href="soap3.html" class="shop-now">Shop</a>
+            </div>
+            <div class="carousel-item">
+                <img src="soap4.jpg" alt="Soap 4">
+                <h3>Soap 4</h3>
+                <p>Brief description of soap 4.</p>
+                <a href="soap4.html" class="shop-now">Shop</a>
+            </div>
+            <div class="carousel-item">
+                <img src="soap1.jpg" alt="Soap 1">
+                <h3>Soap 1</h3>
+                <p>Brief description of soap 1.</p>
+                <a href="soap1.html" class="shop-now">Shop</a>
+            </div>
+            <div class="carousel-item">
+                <img src="soap2.jpg" alt="Soap 2">
+                <h3>Soap 2</h3>
+                <p>Brief description of soap 2.</p>
+                <a href="soap2.html" class="shop-now">Shop</a>
+            </div>
+            <div class="carousel-item">
+                <img src="soap3.jpg" alt="Soap 3">
+                <h3>Soap 3</h3>
+                <p>Brief description of soap 3.</p>
+                <a href="soap3.html" class="shop-now">Shop</a>
+            </div>
+            <div class="carousel-item">
+                <img src="soap4.jpg" alt="Soap 4">
+                <h3>Soap 4</h3>
+                <p>Brief description of soap 4.</p>
+                <a href="soap4.html" class="shop-now">Shop</a>
+            </div>
+            <div class="carousel-item">
+                <img src="soap1.jpg" alt="Soap 1">
+                <h3>Soap 1</h3>
+                <p>Brief description of soap 1.</p>
+                <a href="soap1.html" class="shop-now">Shop</a>
+            </div>
+            <div class="carousel-item">
+                <img src="soap2.jpg" alt="Soap 2">
+                <h3>Soap 2</h3>
+                <p>Brief description of soap 2.</p>
+                <a href="soap2.html" class="shop-now">Shop</a>
+            </div>
+            <div class="carousel-item">
+                <img src="soap3.jpg" alt="Soap 3">
+                <h3>Soap 3</h3>
+                <p>Brief description of soap 3.</p>
+                <a href="soap3.html" class="shop-now">Shop</a>
+            </div>
+            <div class="carousel-item">
+                <img src="soap4.jpg" alt="Soap 4">
+                <h3>Soap 4</h3>
+                <p>Brief description of soap 4.</p>
+                <a href="soap4.html" class="shop-now">Shop</a>
+            </div>
+            <div class="carousel-item">
+                <img src="soap1.jpg" alt="Soap 1">
+                <h3>Soap 1</h3>
+                <p>Brief description of soap 1.</p>
+                <a href="soap1.html" class="shop-now">Shop</a>
+            </div>
+            <div class="carousel-item">
+                <img src="soap2.jpg" alt="Soap 2">
+                <h3>Soap 2</h3>
+                <p>Brief description of soap 2.</p>
+                <a href="soap2.html" class="shop-now">Shop</a>
+            </div>
+            <div class="carousel-item">
+                <img src="soap3.jpg" alt="Soap 3">
+                <h3>Soap 3</h3>
+                <p>Brief description of soap 3.</p>
+                <a href="soap3.html" class="shop-now">Shop</a>
+            </div>
+            <div class="carousel-item">
+                <img src="soap4.jpg" alt="Soap 4">
+                <h3>Soap 4</h3>
+                <p>Brief description of soap 4.</p>
+                <a href="soap4.html" class="shop-now">Shop</a>
+            </div>
+        </div>
+    </div>
+    <h2 style="text-align: center; margin: 20px 0;">Shop By Category</h2>
+    <section class="category-section">
+
+        <div class="category-item">
+            <img src="essential-oils.jpg" alt="Category 1">
+            <a href="essential-oils.html">Category 1</a>
+        </div>
+        <div class="category-item">
+            <img src="carrier-oils2.jpg" alt="Category 2">
+            <a href="carrier-oils.html">Category 2</a>
+        </div>
+        <div class="category-item">
+            <img src="whipped-raw-butter.jpg" alt="Category 3">
+            <a href="butter.html">Category 3</a>
+        </div>
+        <div class="category-item">
+            <img src="soap-shampoo-bodywash.jpg" alt="Category 4">
+            <a href="Soap.html">Category 4</a>
+        </div>
+        <div class="category-item">
+            <img src="jewelry.jpg" alt="Category 5">
+            <a href="Jewelry.html">Category 5</a>
+        </div>
+        <div class="category-item">
+            <img src="starter-kit.jpg" alt="Category 6">
+            <a href="starter-kits.html">Category 6</a>
+        </div>
+    </section>
+    <div class="banner">
+        <p>Want to learn how to use our products effectively? <a href="learning.html">Click here to learn more</a></p>
+    </div>
+    <section class="reviews-section">
+        <h2>Customer Reviews</h2>
+        <div class="reviews">
+            <div class="review">
+                <p><strong>John D.</strong></p>
+                <p>Amazing product! My skin feels so smooth.</p>
+            </div>
+            <div class="review">
+                <p><strong>Jane S.</strong></p>
+                <p>The best shea butter I have ever used. Highly recommend!</p>
+            </div>
+            <div class="review">
+                <p><strong>Alyson N.</strong></p>
+                <p>Great quality and excellent customer service!</p>
+            </div>
+            <div class="review">
+                <p><strong>Jacob R.</strong></p>
+                <p>My skin feels so smooth. I love it!</p>
+            </div>
+            <div class="review">
+                <p><strong>Justin J.</strong></p>
+                <p> Highly recommend!</p>
+            </div>
+            <div class="review">
+                <p><strong>Ali K.</strong></p>
+                <p>Great quality</p>
+            </div>
+            <div class="review">
+                <p><strong>John H.</strong></p>
+                <p>Amazing product! My skin feels so smooth.</p>
+            </div>
+            <div class="review">
+                <p><strong>Joan V.</strong></p>
+                <p>The best shea butter I have ever used. Highly recommend!</p>
+            </div>
+            <div class="review">
+                <p><strong>Kevin D.</strong></p>
+                <p>Amazing product!</p>
+            </div>
+            <div class="review">
+                <p><strong>Jane S.</strong></p>
+                <p>The best shea butter I have ever used. Highly recommend!</p>
+            </div>
+        </div>
+    </section>
+    <section id="contact" style="padding: 20px; text-align: center;">
+        <h2>Contact Us</h2>
+        <p><strong>Address:</strong> 3215 Flushing Road, Flint, MI 48503</p>
+        <p><strong>Phone:</strong> 667-770-9195</p>
+        <p>Have questions? Reach out to us anytime!</p>
+    </section>
+    <footer>
+        <p>&copy; 2025 Product of Africa. All Rights Reserved.</p>
+        <p>Open Mon-Sat: 10 AM - 7 PM | Sun: 12 PM - 7 PM</p>
+    </footer>
+    <script>
+        const carousel = document.getElementById('carousel');
+        const prev = document.getElementById('prev');
+        const next = document.getElementById('next');
+        let scrollPosition = 0;
+
+        prev.addEventListener('click', () => {
+            scrollPosition -= carousel.offsetWidth / 5;
+            carousel.style.transform = `translateX(${scrollPosition}px)`;
+        });
+
+        next.addEventListener('click', () => {
+            scrollPosition += carousel.offsetWidth / 5;
+            carousel.style.transform = `translateX(${scrollPosition}px)`;
+        });
+    </script>
+</body>
+
+</html>
